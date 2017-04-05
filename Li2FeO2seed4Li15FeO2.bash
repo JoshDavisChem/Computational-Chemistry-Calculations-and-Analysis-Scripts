@@ -1,7 +1,7 @@
 #!/bin/bash
 ############################################################################
 #
-# adding lithium to T-LiFeO2, two lithum per calculation
+# Adds two lithium-ions to T-LiFeO2 by subtracting from skeleton T-Li2FeO2 structure.
 # ECUT = 130
 # RHOCUT = 1040
 # 210 KPT
@@ -142,7 +142,7 @@ cd ..
 rm Li15FeO2_Li_"$atom1""_""$atom2"_PreEdit.in
 }
 
-
+# for loop to perform permutation of added lithium positions
 for atom1 in 1 2 3 4; do
   if [ "$atom1" -eq 1 ]; then
 		for atom2 in 2 3 4; do
